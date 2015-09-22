@@ -1,10 +1,8 @@
 var http = require('http')
     , express = require('express')
     , app = express()
-    , bodyParser = require('body-parser')
     , config = require('./config');
 
-app.use(bodyParser.json());
 require('./routes').setup(app);
 
 app.use(logErrors);
